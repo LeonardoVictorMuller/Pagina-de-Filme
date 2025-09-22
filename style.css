@@ -50,10 +50,12 @@ body {
     text-decoration: none;
     transition: 0.3s;
     border-radius: 4px;
+    
 }
 
 .navbar a:hover {
-    background-color: #575757;
+    /* background-color: #575757; */
+    background-image: url("img/FOGO.gif");
 }
 
 /* Responsividade */
