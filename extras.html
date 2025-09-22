@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar só com HTML e CSS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Checkbox escondido */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Botão estilo hambúrguer */
+    .menu-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 2em;
+      color: white;
+      background: #111;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1001;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px; /* começa escondida */
+      width: 250px;
+      height: 100%;
+      background: #111;
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #575757;
+    }
+
+    /* Quando o checkbox está marcado → mostra sidebar */
+    #menu-toggle:checked ~ .sidebar {
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Checkbox escondido -->
+  <input type="checkbox" id="menu-toggle">
+
+  <!-- Botão hambúrguer que aciona o checkbox -->
+  <label for="menu-toggle" class="menu-btn">☰</label>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Elenco</a>
+    <a href="#">Extras</a>
+    <a href="#">Contato</a>
+  </div>
+
+  <main style="padding:20px;">
+    <h1>Conteúdo principal</h1>
+    <p>Role a página e clique no botão para abrir/fechar o menu lateral.</p>
+  </main>
+</body>
+</html>
