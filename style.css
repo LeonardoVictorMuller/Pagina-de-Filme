@@ -1,6 +1,23 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    /* Opcional: pode remover o fundo do body se o #conteudo já vai cobrir tudo */
+    /* background-image: url("img/fundo.jpg"); */
+    /* Cor de fundo caso a imagem não carregue */
+}
+
+#logo {
+    display: inline-block;
+    width: 70px;
+    height: 35px;
+    background-image: url("img/logo.png");
+    background-size: cover;
+
+    transition: background-image 0.2s ease-in-out;
+}
+
+#logo:hover {
+    background-image: url("img/gif_passaro.gif");
 }
 
 
@@ -9,12 +26,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* separa logo/título do menu */
     padding: 10px 30px;
     position: sticky;
-    /* fica fixa ao rolar */
     top: 0;
     z-index: 1000;
+    height: 60px;
+    /* Definindo uma altura fixa para o cálculo de min-height */
 }
 
 /* Logo e título juntos */
@@ -27,7 +44,7 @@ body {
 .navbar .brand img {
     width: 70px;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .navbar .brand h1 {
@@ -50,38 +67,165 @@ body {
     text-decoration: none;
     transition: 0.3s;
     border-radius: 4px;
-    
+
 }
 
 .navbar a:hover {
-    /* background-color: #575757; */
     background-image: url("img/FOGO.gif");
 }
 
-/* Responsividade */
+
+
+/* --- SEÇÃO DE CONTEÚDO PRINCIPAL --- */
+#conteudo {
+    display: flex;
+    background-size: cover;
+    background-image: url("img/fundo.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    /* Efeito parallax legal ao rolar */
+    min-height: calc(100vh - 80px);
+    /* (Altura da tela - altura do navbar) */
+    opacity: 1
+}
+
+
+
+
+#main {
+    width: 60%;
+}
+
+#lado {
+    width: 40%;
+}
+
+/* Estilo para os filhos e para o texto dentro deles */
+#main,
+#lado {
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    /* Sombra no texto para leitura */
+}
+
+/* Estilizando a lista de detalhes no aside */
+#lado ul {
+    list-style: none;
+    /* Remove as bolinhas da lista */
+    padding: 0;
+}
+
+#lado ul li {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fundo escuro semi-transparente */
+    padding: 10px;
+    margin-bottom: 8px;
+    /* Espaço entre os itens */
+    border-left: 3px solid #ff8c00;
+    /* Um detalhe de cor laranja/fogo */
+    border-radius: 0 4px 4px 0;
+}
+
+#lado ul li strong {
+    color: #ff8c00;
+    /* Cor de destaque para o título */
+}
+
+/* Fundo para o texto para garantir a legibilidade */
+#main h1,
+#main p,
+#lado h2 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#main h2 span {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* CÓDIGO CORRIGIDO */
 @media (max-width: 768px) {
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        height: auto;
     }
 
     .navbar nav {
         width: 100%;
+        margin-top: 10px;
     }
 
     .navbar a {
         width: 100%;
         text-align: left;
+        box-sizing: border-box;
+    }
+
+    /* --- MUDANÇAS IMPORTANTES PARA O CONTEÚDO --- */
+    #conteudo {
+        flex-direction: column;
+        /* Empilha o main e o aside */
+
+        /* Garanta que o fundo correto seja carregado */
+        background-attachment: fixed;
+        /* Essencial para o efeito funcionar! */
+    }
+
+    /* CÓDIGO CORRIGIDO COM DUAS IMAGENS */
+
+    /* Dentro de @media (max-width: 768px) { ... } */
+
+    #main {
+        width: 100%;
+        min-height: 50vh;
+        box-sizing: border-box;
+
+        background-image: url("img/fundoCell2cima.png");
+        background-size: cover;
+        /* Garante que a imagem cubra toda a área */
+        background-repeat: no-repeat;
+        /* Evita que a imagem se repita */
+        background-position: left bottom;
+        /* ESSA É A CHAVE: Ancora a imagem na parte de baixo */
+    }
+
+    #lado {
+        width: 100%;
+        min-height: 50vh;
+        box-sizing: border-box;
+
+        background-image: url("img/fundoCell2baixo.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left top;
+        /* ESSA É A CHAVE: Ancora a imagem na parte de cima */
+    }
+
+    /* IMPORTANTE: Remova o background-image do #conteudo no mobile */
+    #conteudo {
+        flex-direction: column;
+        background-image: none;
+        /* Remove o fundo do container pai para não conflitar */
     }
 }
 
 @media (max-width: 441px) {
-    .navbar .brand h1{
+    .navbar .brand h1 {
         font-size: 20px;
     }
 }
+
 @media (max-width: 387px) {
-    .navbar .brand h1{
+    .navbar .brand h1 {
         font-size: 16px;
     }
 }
