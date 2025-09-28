@@ -1,25 +1,19 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    /* Opcional: pode remover o fundo do body se o #conteudo já vai cobrir tudo */
-    /* background-image: url("img/fundo.jpg"); */
-    /* Cor de fundo caso a imagem não carregue */
 }
 
 #logo {
     display: inline-block;
-    width: 70px;
-    height: 35px;
-    background-image: url("img/logo.png");
+    width: 60px;
+    height: 40px;
+    background-image: url("img/logo.jpg");
     background-size: cover;
 
     transition: background-image 0.2s ease-in-out;
 }
 
-#logo:hover {
-    background-image: url("img/gif_passaro.gif");
-}
-
+#logo:hover {background-image: url("img/gif_passaro.gif");}
 
 .navbar {
     background-color: #000;
@@ -31,7 +25,6 @@ body {
     top: 0;
     z-index: 1000;
     height: 60px;
-    /* Definindo uma altura fixa para o cálculo de min-height */
 }
 
 /* Logo e título juntos */
@@ -75,7 +68,6 @@ body {
 }
 
 
-
 /* --- SEÇÃO DE CONTEÚDO PRINCIPAL --- */
 #conteudo {
     display: flex;
@@ -83,19 +75,14 @@ body {
     background-image: url("img/fundo.jpg");
     background-position: center;
     background-attachment: fixed;
-    /* Efeito parallax legal ao rolar */
     min-height: calc(100vh - 80px);
-    /* (Altura da tela - altura do navbar) */
     opacity: 1
 }
-
-
 
 
 #main {
     width: 60%;
 }
-
 #lado {
     width: 40%;
 }
@@ -104,13 +91,12 @@ body {
 #main,
 #lado {
     padding: 20px;
+    padding-top: 2px;
     box-sizing: border-box;
     color: white;
     text-shadow: 2px 2px 4px #000;
-    /* Sombra no texto para leitura */
 }
 
-/* Estilizando a lista de detalhes no aside */
 #lado ul {
     list-style: none;
     /* Remove as bolinhas da lista */
@@ -119,18 +105,15 @@ body {
 
 #lado ul li {
     background-color: rgba(0, 0, 0, 0.7);
-    /* Fundo escuro semi-transparente */
     padding: 10px;
     margin-bottom: 8px;
     /* Espaço entre os itens */
     border-left: 3px solid #ff8c00;
-    /* Um detalhe de cor laranja/fogo */
     border-radius: 0 4px 4px 0;
 }
 
 #lado ul li strong {
     color: #ff8c00;
-    /* Cor de destaque para o título */
 }
 
 /* Fundo para o texto para garantir a legibilidade */
@@ -143,6 +126,7 @@ body {
     display: inline-block;
 }
 
+
 #main h2 span {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 15px;
@@ -150,7 +134,6 @@ body {
     display: inline-block;
 }
 
-/* CÓDIGO CORRIGIDO */
 @media (max-width: 768px) {
 
     .navbar {
@@ -170,19 +153,10 @@ body {
         box-sizing: border-box;
     }
 
-    /* --- MUDANÇAS IMPORTANTES PARA O CONTEÚDO --- */
     #conteudo {
         flex-direction: column;
-        /* Empilha o main e o aside */
-
-        /* Garanta que o fundo correto seja carregado */
         background-attachment: fixed;
-        /* Essencial para o efeito funcionar! */
     }
-
-    /* CÓDIGO CORRIGIDO COM DUAS IMAGENS */
-
-    /* Dentro de @media (max-width: 768px) { ... } */
 
     #main {
         width: 100%;
@@ -195,7 +169,6 @@ body {
         background-repeat: no-repeat;
         /* Evita que a imagem se repita */
         background-position: left bottom;
-        /* ESSA É A CHAVE: Ancora a imagem na parte de baixo */
     }
 
     #lado {
@@ -207,15 +180,23 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: left top;
-        /* ESSA É A CHAVE: Ancora a imagem na parte de cima */
     }
 
-    /* IMPORTANTE: Remova o background-image do #conteudo no mobile */
     #conteudo {
         flex-direction: column;
         background-image: none;
-        /* Remove o fundo do container pai para não conflitar */
     }
+
+    /* ---footer--- */
+    .footer-simples .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-simples p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
 }
 
 @media (max-width: 441px) {
@@ -227,5 +208,124 @@ body {
 @media (max-width: 387px) {
     .navbar .brand h1 {
         font-size: 16px;
+    }
+}
+
+/* ----footer---- */
+
+.footer-simples {
+    background-color: #1a1a1a;
+    color: #a0a0a0;
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-simples .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-simples p {
+    margin: 5px 0;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.footer-simples .footer-nav a {
+    color: #a0a0a0;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-simples .footer-nav a:hover {
+    color: #ffffff; 
+}
+
+
+
+@media (max-width: 880px) {
+    .footer-simples .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ------------------pagina elenco-------------------  */
+
+/* --- Estilos para a Galeria de Elenco --- */
+/* Mova as regras de #main.elenco para .galeria-atores */
+.galeria-atores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Garanta que o h1 ocupe a largura toda */
+#main.elenco h1 {
+    text-align: left; /* Opcional: centraliza o título */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
+}
+
+/* Estilo geral para todos os cards de ator */
+.ator-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    /* CONTROLE DE TAMANHO DO CARD */
+    flex: 1 1 300px;
+    max-width: 273px; 
+    
+}
+
+
+.ator-foto {
+    height: 120px;
+    width: 90px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+    transition: all 0.3s ease-in-out;
+}
+
+.ator-foto:hover{
+    transform: scale(1.05);
+}
+
+#katniss-foto:hover {
+    transform: scale(1.05); 
+    background-image: url("img/elenco/katniss.gif");
+}
+
+#katniss-foto {
+    background-image: url("img/elenco/katnissfoto.gif");
+}
+
+.ator-info h3 {
+    margin: 0 0 5px 0;
+    color: #ff8c00; /* Cor de destaque */
+}
+
+.ator-info h4 {
+    margin: 0;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    
+    #main.elenco {
+        flex-direction: column; 
     }
 }

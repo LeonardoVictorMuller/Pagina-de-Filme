@@ -1,83 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sidebar só com HTML e CSS</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+  <title>Site Básico sem JS</title>
+  <link rel="stylesheet" href="style.css">
 
-    /* Checkbox escondido */
-    #menu-toggle {
-      display: none;
-    }
-
-    /* Botão estilo hambúrguer */
-    .menu-btn {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      font-size: 2em;
-      color: white;
-      background: #111;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 5px;
-      z-index: 1001;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -250px; /* começa escondida */
-      width: 250px;
-      height: 100%;
-      background: #111;
-      color: white;
-      padding-top: 60px;
-      transition: 0.3s;
-    }
-
-    .sidebar a {
-      display: block;
-      padding: 15px;
-      color: white;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .sidebar a:hover {
-      background: #575757;
-    }
-
-    /* Quando o checkbox está marcado → mostra sidebar */
-    #menu-toggle:checked ~ .sidebar {
-      left: 0;
-    }
-  </style>
 </head>
+
 <body>
-  <!-- Checkbox escondido -->
-  <input type="checkbox" id="menu-toggle">
+  <header>
+    <div class="navbar">
+      <div class="brand">
+        <a href="index.html" id="logo"></a>
+        <h1>The Hunger Games: Catching Fire</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="elenco.html">Elenco</a>
+        <a href="extras.html">Extras</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Botão hambúrguer que aciona o checkbox -->
-  <label for="menu-toggle" class="menu-btn">☰</label>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <a href="#">Home</a>
-    <a href="#">Elenco</a>
-    <a href="#">Extras</a>
-    <a href="#">Contato</a>
+  <div id="conteudo">
+    <main id="main" class="index">
+      <h1>Elenco</h1>
+
+      <p>
+        <img src="" alt="">
+        <h3>Jennifer Lawrence</h3>
+        <h4>Katniss Everdeen</h4>
+      </p>
+    </main>
+
+    <aside id="lado" class="index">
+      <h2>equipe</h2>
+      <ul>
+        <li><strong>Ano de Lançamento:</strong> 2013</li>
+        <li><strong>Gênero:</strong> Ação, Ficção Científica, Aventura</li>
+        <li><strong>Duração:</strong> 146 minutos (2h 26min)</li>
+        <li><strong>Classificação Indicativa:</strong> 14 anos</li>
+        <li><strong>Franquia:</strong>The Hunger Games</li>
+        <li><strong>Sequência:</strong>2º filme da série</li>
+      </ul>
+    </aside>
   </div>
+  <footer class="footer-simples">
+    <div class="footer-container">
+      <p>&copy; 2025 Leonardo Victor Muller de Morais. Todos os direitos reservados.</p>
+      <nav class="footer-nav">
+        <a href="https://docs.google.com/document/d/1xq0Ra2c6emzc5gtiaAn-qcBZuSporQACCPHymqh5APU/edit?usp=sharing">Política de Privacidade</a>
+        <a href="https://docs.google.com/document/d/1xq0Ra2c6emzc5gtiaAn-qcBZuSporQACCPHymqh5APU/edit?usp=sharing">Termos de Uso</a>
+        <a href="https://www.instagram.com/leovictor_muller">Contato</a>
+      </nav>
+    </div>
+  </footer>
 
-  <main style="padding:20px;">
-    <h1>Conteúdo principal</h1>
-    <p>Role a página e clique no botão para abrir/fechar o menu lateral.</p>
-  </main>
 </body>
+
 </html>
