@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    text-align: justify;
 }
 
 #logo {
@@ -13,7 +14,9 @@ body {
     transition: background-image 0.2s ease-in-out;
 }
 
-#logo:hover {background-image: url("img/gif_passaro.gif");}
+#logo:hover {
+    background-image: url("img/gif_passaro.gif");
+}
 
 .navbar {
     background-color: #000;
@@ -83,6 +86,7 @@ body {
 #main {
     width: 60%;
 }
+
 #lado {
     width: 40%;
 }
@@ -104,7 +108,7 @@ body {
 }
 
 #lado ul li {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 10px;
     margin-bottom: 8px;
     /* Espaço entre os itens */
@@ -118,7 +122,9 @@ body {
 
 /* Fundo para o texto para garantir a legibilidade */
 #main h1,
+#main h2,
 #main p,
+#sinopse,
 #lado h2 {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 15px;
@@ -127,11 +133,15 @@ body {
 }
 
 
-#main h2 span {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    border-radius: 5px;
-    display: inline-block;
+
+@media (max-width: 830px) {
+    #main h1 {
+        font-size: 29px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 15px;
+        border-radius: 5px;
+        display: inline-block;
+    }
 }
 
 @media (max-width: 768px) {
@@ -192,6 +202,7 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-simples p {
         text-align: center;
         margin-bottom: 10px;
@@ -211,55 +222,9 @@ body {
     }
 }
 
-/* ----footer---- */
-
-.footer-simples {
-    background-color: #1a1a1a;
-    color: #a0a0a0;
-    padding: 20px 30px;
-    text-align: center;
-    font-size: 0.9em;
-}
-
-.footer-simples .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.footer-simples p {
-    margin: 5px 0;
-    flex-grow: 1;
-    text-align: left;
-}
-
-.footer-simples .footer-nav a {
-    color: #a0a0a0;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-simples .footer-nav a:hover {
-    color: #ffffff; 
-}
-
-
-
-@media (max-width: 880px) {
-    .footer-simples .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 /* ------------------pagina elenco-------------------  */
 
 /* --- Estilos para a Galeria de Elenco --- */
-/* Mova as regras de #main.elenco para .galeria-atores */
 .galeria-atores {
     display: flex;
     flex-wrap: wrap;
@@ -268,25 +233,19 @@ body {
     align-items: stretch;
 }
 
-/* Garanta que o h1 ocupe a largura toda */
-#main.elenco h1 {
-    text-align: left; /* Opcional: centraliza o título */
-    margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
-}
-
 /* Estilo geral para todos os cards de ator */
 .ator-card {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 15px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     gap: 15px;
-    
+
     /* CONTROLE DE TAMANHO DO CARD */
     flex: 1 1 300px;
-    max-width: 273px; 
-    
+    max-width: 273px;
+
 }
 
 
@@ -296,16 +255,17 @@ body {
     background-size: cover;
     background-position: center;
     border-radius: 4px;
-    flex-shrink: 0; /* Impede que a imagem encolha */
+    flex-shrink: 0;
+    /* Impede que a imagem encolha */
     transition: all 0.3s ease-in-out;
 }
 
-.ator-foto:hover{
+.ator-foto:hover {
     transform: scale(1.05);
 }
 
 #katniss-foto:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
     background-image: url("img/elenco/katniss.gif");
 }
 
@@ -315,7 +275,8 @@ body {
 
 .ator-info h3 {
     margin: 0 0 5px 0;
-    color: #ff8c00; /* Cor de destaque */
+    color: #ff8c00;
+    /* Cor de destaque */
 }
 
 .ator-info h4 {
@@ -324,8 +285,166 @@ body {
 }
 
 @media (max-width: 768px) {
-    
+
     #main.elenco {
-        flex-direction: column; 
+        flex-direction: column;
+    }
+}
+
+.equipe-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #ff8c00;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    /* CONTROLE DE TAMANHO DO CARD */
+    flex: 1 1 300px;
+    max-width: 273px;
+
+}
+
+.galeria-equipe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+/* ------------------ PÁGINA EXTRAS ------------------- */
+
+/* Estilo para cada bloco de curiosidade no <main> */
+.item-extra {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 3px solid #ff8c00;
+}
+
+.item-extra h2 {
+    color: #ff8c00;
+    margin-top: 0;
+}
+
+/* Estilo para as citações das críticas no <aside> */
+.critica {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-left: 3px solid #ff8c00;
+    padding: 15px;
+    margin: 0 0 15px 0;
+    /* Remove margem padrão e adiciona espaço abaixo */
+    border-radius: 0 4px 4px 0;
+}
+
+.critica p {
+    margin: 0;
+    font-style: italic;
+}
+
+.critica cite {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Garante que o H1 da página de extras ocupe toda a largura */
+
+
+
+
+/* Estilo para o container do áudio */
+#titulo-musica {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: #eee;
+}
+
+/* Estilo para o player de áudio em si */
+audio {
+    width: 100%;
+    height: 40px;
+    /* Ajusta a altura do player */
+}
+
+/* ----------------------footer----------------------- */
+/* ---- Footer Compacto ---- */
+.footer-compacto {
+    background-color: #1a1a1a;
+    color: #a0a0a0;
+    padding: 20px 30px;
+    /* Padding reduzido para menor altura */
+    font-size: 0.9em;
+    border-top: 2px solid #ff8c00;
+    /* Detalhe temático */
+}
+
+.footer-compacto .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite quebrar a linha em telas pequenas */
+    gap: 20px;
+}
+
+.footer-compacto .copyright p {
+    margin: 0;
+}
+
+/* Wrapper que segura os dois grupos de links */
+.footer-compacto .footer-links-wrapper {
+    display: flex;
+    gap: 30px;
+    /* Espaço entre "Referências" e "Navegação" */
+    flex-wrap: wrap;
+    /* Permite que os grupos de link quebrem a linha se necessário */
+}
+
+.footer-compacto .link-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espaço entre o título (strong) e os links */
+}
+
+.footer-compacto .link-group strong {
+    color: #ffffff;
+}
+
+.footer-compacto .link-group nav {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-compacto a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-compacto a:hover {
+    color: #ffffff;
+}
+
+/* ---- Responsividade para o Footer Compacto ---- */
+@media (max-width: 1170px) {
+    .footer-compacto .footer-container {
+        justify-content: center;
+        /* Centraliza tudo quando quebrar a linha */
+        text-align: center;
+    }
+
+    .footer-compacto .footer-links-wrapper {
+        justify-content: center;
+        width: 100%;
     }
 }
