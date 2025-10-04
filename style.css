@@ -375,7 +375,6 @@ body {
     border-left: 3px solid #ff8c00;
     padding: 15px;
     margin: 0 0 15px 0;
-    /* Remove margem padrão e adiciona espaço abaixo */
     border-radius: 0 4px 4px 0;
 }
 
@@ -392,11 +391,6 @@ body {
     color: #ccc;
 }
 
-/* Garante que o H1 da página de extras ocupe toda a largura */
-
-
-
-
 /* Estilo para o container do áudio */
 #titulo-musica {
     margin: 0 0 10px 0;
@@ -408,19 +402,15 @@ body {
 audio {
     width: 100%;
     height: 40px;
-    /* Ajusta a altura do player */
 }
 
 /* ----------------------footer----------------------- */
-/* ---- Footer Compacto ---- */
 .footer-compacto {
     background-color: #1a1a1a;
     color: #a0a0a0;
     padding: 20px 30px;
-    /* Padding reduzido para menor altura */
     font-size: 0.9em;
     border-top: 2px solid #ff8c00;
-    /* Detalhe temático */
 }
 
 .footer-compacto .footer-container {
@@ -430,7 +420,6 @@ audio {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* Permite quebrar a linha em telas pequenas */
     gap: 20px;
 }
 
@@ -438,13 +427,11 @@ audio {
     margin: 0;
 }
 
-/* Wrapper que segura os dois grupos de links */
+
 .footer-compacto .footer-links-wrapper {
     display: flex;
     gap: 30px;
-    /* Espaço entre "Referências" e "Navegação" */
     flex-wrap: wrap;
-    /* Permite que os grupos de link quebrem a linha se necessário */
 }
 
 .footer-compacto .link-group {
