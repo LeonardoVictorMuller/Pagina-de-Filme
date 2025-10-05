@@ -1,6 +1,6 @@
 <h1 align="center">
   <div style="
-    background-image: url('https://i.redd.it/yap3bpbvjyof1.gif'); /* SUBSTITUA PELA URL DO SEU GIF */
+    background-image: url('img/fundo-readme.gif'); /* SUBSTITUA PELA URL DO SEU GIF */
     background-size: cover; /* Ajusta o GIF para cobrir o fundo */
     background-position: center; /* Centraliza o GIF */
     padding: 30px 10px; /* Preenchimento em torno do texto */
