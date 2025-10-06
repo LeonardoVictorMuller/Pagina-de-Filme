@@ -1,32 +1,17 @@
-<div align="center" style="
+<div style="
   position: relative;
   border-radius: 8px;
   overflow: hidden;
   max-width: 900px;
-  margin: auto;
-">
-  <img src="img/fundo-readme.gif" style="
+  margin: auto;">
+  <img src="img/fundo-readme3.gif" style="
     width: 100%;
     display: block;
-    opacity: 0.4;
+    opacity: 1;
+    padding-bottom: 15;
   ">
-  
-  <div style="
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    color: #ffffff;
-    font-family: Impact, Arial Black, sans-serif;
-    font-size: 3.5em; 
-    font-weight: bold;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
-    letter-spacing: 2px; 
-  ">
-    THE HUNGER GAMES: CATCHING FIRE
-  </div>
 </div>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
@@ -55,36 +40,22 @@
 - **HTML5:** Estrutura semântica e acessível do conteúdo.
 - **CSS3:** Estilização completa, incluindo Flexbox para layouts responsivos e efeitos visuais.
 
-<h2 align="center">📁 Estrutura do Projeto</h2>
+<h2>📁 Estrutura do Projeto</h2>
 
-.
-├── img/                  # Contém todas as imagens e GIFs do projeto
-│   ├── logo.png
-│   ├── gif_passaro.gif
-│   ├── FOGO.gif
-│   ├── fundo.jpg
-│   ├── fundoCell2cima.png
-│   ├── fundoCell2baixo.png
-│   ├── katnissfoto.gif
-│   ├── katniss.gif
-│   ├── peeta.jpg
-│   ├── peeta.gif
-│   ├── gale.jpg
-│   └── gale.gif
-├── audio/                # Contém arquivos de áudio
-│   └── everybody.mp3
-├── index.html            # Página inicial do site
-├── elenco.html           # Página com o elenco do filme
-├── extras.html           # Página com extras (curiosidades, prêmios, etc.)
-└── style.css             # Folha de estilos CSS principal
-└── README.md             # Este arquivo
 
+├── img/ <br>
+├── audio/              
+├── index.html          
+├── elenco.html         
+├── extras.html         
+└── style.css     
+└── README.md            
 
 <h2 align="center">⚙️ Como Rodar o Projeto</h2>
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/LeonardoVictorMuller/Pagina-de-Filme.git](https://github.com/LeonardoVictorMuller/Pagina-de-Filme.git)
+    git clone https://github.com/LeonardoVictorMuller/Pagina-de-Filme
     ```
 2.  **Navegue até o diretório do projeto:**
     ```bash
@@ -99,8 +70,6 @@
 - [GitHub](https://github.com/LeonardoVictorMuller)
 - [Instagram](https://www.instagram.com/leovictor_muller)
 
-<h2 align="center">📄 Licença</h2>
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
