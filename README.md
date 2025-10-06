@@ -4,7 +4,7 @@
   overflow: hidden;
   max-width: 900px;
   margin: auto;">
-  <img src="img/fundo-readme3.gif" style="
+  <img src="img/fundo-readme.gif" style="
     width: 100%;
     display: block;
     opacity: 1;
