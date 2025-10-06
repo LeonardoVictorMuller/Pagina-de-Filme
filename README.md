@@ -1,17 +1,32 @@
-<h1 align="center">
+<div align="center" style="
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: auto;
+">
+  <img src="img/fundo-readme.gif" style="
+    width: 100%;
+    display: block;
+    opacity: 0.4;
+  ">
+  
   <div style="
-    background-image: url('img/fundo-readme.gif'); /* SUBSTITUA PELA URL DO SEU GIF */
-    background-size: cover; /* Ajusta o GIF para cobrir o fundo */
-    background-position: center; /* Centraliza o GIF */
-    padding: 30px 10px; /* Preenchimento em torno do texto */
-    border-radius: 8px; /* Cantos arredondados */
-    color: #fff; /* Cor do texto para contraste com o GIF */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra para melhorar leitura */
-    font-family: 'Cinzel', serif; /* Mantém a fonte temática */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: #ffffff;
+    font-family: Impact, Arial Black, sans-serif;
+    font-size: 3.5em; 
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+    letter-spacing: 2px; 
   ">
     THE HUNGER GAMES: CATCHING FIRE
   </div>
-</h1>
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
