@@ -1,4 +1,4 @@
-<div style="
+<div align="center" style="
   position: relative;
   border-radius: 8px;
   overflow: hidden;
